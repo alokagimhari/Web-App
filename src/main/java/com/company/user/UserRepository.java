@@ -1,2 +1,7 @@
-package com.company.user;public interface UserRepository {
+package com.company.user;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface UserRepository extends CrudRepository<User, Integer> {
+
 }

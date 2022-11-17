@@ -1,10 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Welcome to My Application</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        /* Style the header */
+        .header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Style the top navigation bar */
+        .nav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Style the topnav links */
+        .nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+
 </head>
 <body>
-$END$
+<!--<div class="container-fluid text-center">-->
+    <div class="header">
+        <h1>Banking Management System</h1>
+    </div>
+    <div class="nav">
+        <a  th:href="@{/}">Home</a>
+    <a  th:href="@{/users}">Users</a>
+    <a th:href="@{/account}">Account</a>
+    <a  th:href="@{/payment}">Salary Payment</a>
+        </div>
+ <img src="/image/bank.jpg" height="450" width="1365">
+
 </body>
 </html>

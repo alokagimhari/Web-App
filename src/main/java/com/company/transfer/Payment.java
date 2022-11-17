@@ -1,12 +1,10 @@
 package com.company.transfer;
 
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
-
 import javax.persistence.*;
 
 @Entity
 @Table(name = "payment")
-public class payment {
+public class Payment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,5 +26,63 @@ public class payment {
     @Column(nullable = false,name = "date")
     private String date;
 
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getAccHolderName() {
+        return accHolderName;
+    }
+
+    public void setAccHolderName(String accHolderName) {
+        this.accHolderName = accHolderName;
+    }
+
+    public String getBeneficiaryName() {
+        return BeneficiaryName;
+    }
+
+    public void setBeneficiaryName(String beneficiaryName) {
+        BeneficiaryName = beneficiaryName;
+    }
+
+    public String getBeneficiaryBank() {
+        return BeneficiaryBank;
+    }
+
+    public void setBeneficiaryBank(String beneficiaryBank) {
+        BeneficiaryBank = beneficiaryBank;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "Payment{" +
+                "id=" + id +
+                ", accHolderName='" + accHolderName + '\'' +
+                ", BeneficiaryName='" + BeneficiaryName + '\'' +
+                ", BeneficiaryBank='" + BeneficiaryBank + '\'' +
+                ", amount=" + amount +
+                ", date='" + date + '\'' +
+                '}';
+    }
 }
